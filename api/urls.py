@@ -4,6 +4,7 @@ from . import views
 urlpatterns = [
     path('', views.apioverview, name='api-overview'),
 
+    # Items
     path('get-item', views.getitem, name='get-item'),
     path('add-item/', views.additem, name='add-item'),
     path('update-item/<str:pk>/', views.updateitem, name='update-item'),
@@ -11,6 +12,7 @@ urlpatterns = [
     path('item-list/', views.itemlist, name='item-list'),
     path('item-detail/<str:pk>/', views.itemdetail, name='item-detail'),
 
+    # Tasks
     path('get-task/', views.gettask, name='get-task'),
     path('add-task/', views.addtask, name='add-task'),
     path('update-task/<str:pk>/', views.updatetask, name='update-task'),

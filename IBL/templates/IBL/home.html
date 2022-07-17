@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <h1>List of greetings!</h1>
+</head>
+<body>
+    {% if greeting %}
+    {% for context in greeting %}
+        <h1>{{ context.greeting }}</h1>
+        <p>Created on {{ context.created }}</p>
+    {% endfor %}
+    {% else %}
+        <p>There are no current greetings.</p>
+    {% endif %}
+</body>
+</html>

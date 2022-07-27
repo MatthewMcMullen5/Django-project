@@ -16,12 +16,14 @@ Including another URLconf
 import debug_toolbar
 from django.contrib import admin
 from django.urls import path, include
+# from pages.views import home_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('playground/', include('playground.urls')),
     path('__debug__/', include('debug_toolbar.urls')),
-    path('', include('api.urls')),
+    path('', include('api.urls'), name='home'),
     path('api/', include('api.urls')),
-    path('IBL/', include('IBL.urls'))
+    path('IBL/', include('IBL.urls')),
+    path('pages/', include('pages.urls')),
 ]
